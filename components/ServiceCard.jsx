@@ -1,33 +1,28 @@
 import Image from "next/image";
+import { IMAGE_URL } from "../constant";
 
-const ServiceCard = ({ icon, title, description }) => {
+const ServiceCard = ({ icon, title, shortDescription }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <div className="flex items-center mb-4">
-        <Image
-          height={100}
-          width={100}
-          src={icon}
-          alt="Icon"
-          className="w-6 h-6 mr-2"
-        />
-        <h3 className="text-lg font-bold">{title}</h3>
+    <div className="bg-white p-6 rounded-lg">
+      <Image
+        height={1000}
+        width={1000}
+        src={`${IMAGE_URL}${icon}`}
+        alt="Icon"
+        className="h-24 w-auto mr-2"
+      />
+      <div className="h-16 sm:h-20 md:h-24 lg:h-20">
+        <h3 className="text-lg font-bold mt-7">{title}</h3>
+        <p className="text-gray-600 text-sm">{shortDescription}</p>
       </div>
-      <p className="text-gray-600 text-sm">{description}</p>
-      <button className="mt-4 flex items-center text-sky-blue hover:underline">
+      <button className="mt-4 flex items-center font-semibold text-[#32c5ff] hover:underline">
         Learn More
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 ml-1"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M6.293 15.293a1 1 0 0 0 1.414 0L12 10.414V12a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1H7a1 1 0 1 0 0 2h2.586L6.293 8.293a1 1 0 0 0-1.414 0l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414 0z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <Image
+          height={1000}
+          width={1000}
+          src="/right-arrow.png"
+          className="w-5 h-auto ml-3"
+        />
       </button>
     </div>
   );
