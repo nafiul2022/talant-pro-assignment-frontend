@@ -1,6 +1,5 @@
 import ServiceCard from "@/components/ServiceCard";
-import { GET_SERVICES_URL } from "@/constant";
-import axios from "axios";
+import SpaceShipServices from "@/services/spaceshipServices";
 
 const IndexPage = ({ data }) => {
   return (
@@ -28,7 +27,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const getServerSideProps = async () => {
-  const response = await axios.get(GET_SERVICES_URL);
+  const response = await SpaceShipServices.getAllServices();
   const data = response.data;
 
   return {
