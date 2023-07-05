@@ -11,8 +11,8 @@ const ServiceCard = ({ icon, title, shortDescription }) => {
         alt="Icon"
         className="h-24 w-auto mr-2"
       />
-      <div className="h-16 sm:h-20 md:h-24 lg:h-20">
-        <h3 className="text-lg font-bold mt-7">{title}</h3>
+      <div className="h-16 sm:h-24 md:h-26 lg:h-24">
+        <h3 className="text-lg font-bold mt-7 mb-4">{title}</h3>
         <p className="text-gray-600 text-sm">{shortDescription}</p>
       </div>
       <button className="mt-4 flex items-center font-semibold text-[#32c5ff] hover:underline">

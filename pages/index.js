@@ -5,7 +5,7 @@ const IndexPage = ({ data }) => {
   return (
     <div className="container mx-auto py-10 px-3 sm:px-1">
       <div className="text-center">
-        <h1 className="text-4xl font-semibold mb-7">
+        <h1 className="text-4xl font-semibold mb-7 mx-12">
           Explore our Storage Space, Co-Working Space, Co-Warehouse & Services
         </h1>
         <h2 className="text-gray-600 mb-8">
